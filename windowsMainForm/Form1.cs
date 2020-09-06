@@ -35,5 +35,14 @@ namespace windowsMainForm
             String url = addressTextBox.Text;
             webBrowser1.Navigate(url);
         }
+
+        private void AddressTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                String url = addressTextBox.Text;
+                webBrowser1.Navigate(url);
+            }
+        }
     }
 }
