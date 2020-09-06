@@ -46,8 +46,8 @@
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripButton5 = new System.Windows.Forms.ToolStripButton();
+            this.addressTextBox = new System.Windows.Forms.ToolStripTextBox();
+            this.goButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -156,8 +156,8 @@
             this.toolStripButton2,
             this.toolStripButton3,
             this.toolStripButton4,
-            this.toolStripTextBox1,
-            this.toolStripButton5,
+            this.addressTextBox,
+            this.goButton,
             this.toolStripButton6});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
@@ -201,20 +201,20 @@
             this.toolStripButton4.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton4.Text = "toolStripButton4";
             // 
-            // toolStripTextBox1
+            // addressTextBox
             // 
-            this.toolStripTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 25);
+            this.addressTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.addressTextBox.Name = "addressTextBox";
+            this.addressTextBox.Size = new System.Drawing.Size(100, 25);
             // 
-            // toolStripButton5
+            // goButton
             // 
-            this.toolStripButton5.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton5.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton5.Image")));
-            this.toolStripButton5.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton5.Name = "toolStripButton5";
-            this.toolStripButton5.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton5.Text = "toolStripButton5";
+            this.goButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.goButton.Image = ((System.Drawing.Image)(resources.GetObject("goButton.Image")));
+            this.goButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.goButton.Name = "goButton";
+            this.goButton.Size = new System.Drawing.Size(23, 22);
+            this.goButton.Click += new System.EventHandler(this.GoButton_Click);
             // 
             // toolStripButton6
             // 
@@ -295,8 +295,8 @@
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ToolStripButton toolStripButton3;
         private System.Windows.Forms.ToolStripButton toolStripButton4;
-        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
-        private System.Windows.Forms.ToolStripButton toolStripButton5;
+        private System.Windows.Forms.ToolStripTextBox addressTextBox;
+        private System.Windows.Forms.ToolStripButton goButton;
         private System.Windows.Forms.ToolStripButton toolStripButton6;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
