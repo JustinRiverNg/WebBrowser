@@ -34,6 +34,7 @@ namespace windowsMainForm
         {
             String url = addressTextBox.Text;
             webBrowser1.Navigate(url);
+            tabPage1.Text = url;
         }
 
         private void AddressTextBox_KeyDown(object sender, KeyEventArgs e)
@@ -42,6 +43,7 @@ namespace windowsMainForm
             {
                 String url = addressTextBox.Text;
                 webBrowser1.Navigate(url);
+                tabPage1.Text = url;
             }
         }
     }
