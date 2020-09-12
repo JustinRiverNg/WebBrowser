@@ -30,21 +30,6 @@ namespace WebBrowser.UI
                 "\nName: Justin Ng \nAuburn Univeristy Student ID: 904090369");
         }
 
-        private void GoButton_Click(object sender, EventArgs e)
-        {
-            String url = addressTextBox.Text;
-            webBrowser1.Navigate(url);
-            tabPage1.Text = url;
-        }
-
-        private void AddressTextBox_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                String url = addressTextBox.Text;
-                webBrowser1.Navigate(url);
-                tabPage1.Text = url;
-            }
-        }
+        
     }
 }

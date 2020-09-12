@@ -142,8 +142,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ToolStripButton toolStripButton3;
@@ -151,6 +149,7 @@
         private System.Windows.Forms.ToolStripTextBox addressTextBox;
         private System.Windows.Forms.ToolStripButton goButton;
         private System.Windows.Forms.ToolStripButton toolStripButton6;
-        private System.Windows.Forms.WebBrowser webBrowser1;
+        public System.Windows.Forms.ToolStrip toolStrip1;
+        public System.Windows.Forms.WebBrowser webBrowser1;
     }
 }
