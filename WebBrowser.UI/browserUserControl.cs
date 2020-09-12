@@ -20,7 +20,7 @@ namespace WebBrowser.UI
         {
             InitializeComponent();
         }
-        
+
         /** Method for clicking the "go" button to navigate to a new page. */
         private void GoButton_Click(object sender, EventArgs e)
         {
@@ -46,12 +46,6 @@ namespace WebBrowser.UI
             webBrowser1.Navigate(webBrowser1.Url.ToString());
         }
 
-        /** Change the url in the address field if the user clicks to navigate to a new page. */
-        private void WebBrowser1_Navigated(object sender, WebBrowserNavigatedEventArgs e)
-        {
-            addressTextBox.Text = webBrowser1.Url.ToString();
-        }
-
         /** Method for clicking the "backButton" button. */
         private void BackLinksButton_Click(object sender, EventArgs e)
         {
@@ -73,6 +67,20 @@ namespace WebBrowser.UI
                 webBrowser1.Navigate(url);
             }
             
+        }
+
+
+
+        /** Add the current url to the backLinks stack when the user clicks to navigate to a new page. This method occurs BEFORE the web browser has navigated. */
+        private void WebBrowser1_Navigating(object sender, WebBrowserNavigatingEventArgs e)
+        {
+
+        }
+
+        /** Change the url in the address field if the user clicks to navigate to a new page. This method occurs AFTER the web browser has navigated.*/
+        private void WebBrowser1_Navigated(object sender, WebBrowserNavigatedEventArgs e)
+        {
+            addressTextBox.Text = webBrowser1.Url.ToString();
         }
     }
 }
