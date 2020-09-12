@@ -12,6 +12,10 @@ namespace WebBrowser.UI
 {
     public partial class browserUserControl : UserControl
     {
+
+        Stack<string> backLinks = new Stack<string>();
+        Stack<string> forwardLinks = new Stack<string>();
+
         public browserUserControl()
         {
             InitializeComponent();
