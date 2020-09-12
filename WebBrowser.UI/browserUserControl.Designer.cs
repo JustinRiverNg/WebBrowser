@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(browserUserControl));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.backLinksButton = new System.Windows.Forms.ToolStripButton();
+            this.forwardLinksButton = new System.Windows.Forms.ToolStripButton();
+            this.refreshButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.addressTextBox = new System.Windows.Forms.ToolStripTextBox();
             this.goButton = new System.Windows.Forms.ToolStripButton();
@@ -44,9 +44,9 @@
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
-            this.toolStripButton2,
-            this.toolStripButton3,
+            this.backLinksButton,
+            this.forwardLinksButton,
+            this.refreshButton,
             this.toolStripButton4,
             this.addressTextBox,
             this.goButton,
@@ -57,32 +57,35 @@
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripButton1
+            // backLinksButton
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton1.Text = "toolStripButton1";
+            this.backLinksButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.backLinksButton.Image = ((System.Drawing.Image)(resources.GetObject("backLinksButton.Image")));
+            this.backLinksButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.backLinksButton.Name = "backLinksButton";
+            this.backLinksButton.Size = new System.Drawing.Size(23, 22);
+            this.backLinksButton.Text = "toolStripButton1";
+            this.backLinksButton.Click += new System.EventHandler(this.BackLinksButton_Click);
             // 
-            // toolStripButton2
+            // forwardLinksButton
             // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton2.Text = "toolStripButton2";
+            this.forwardLinksButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.forwardLinksButton.Image = ((System.Drawing.Image)(resources.GetObject("forwardLinksButton.Image")));
+            this.forwardLinksButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.forwardLinksButton.Name = "forwardLinksButton";
+            this.forwardLinksButton.Size = new System.Drawing.Size(23, 22);
+            this.forwardLinksButton.Text = "toolStripButton2";
+            this.forwardLinksButton.Click += new System.EventHandler(this.ForwardLinksButton_Click);
             // 
-            // toolStripButton3
+            // refreshButton
             // 
-            this.toolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton3.Text = "toolStripButton3";
+            this.refreshButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.refreshButton.Image = ((System.Drawing.Image)(resources.GetObject("refreshButton.Image")));
+            this.refreshButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.refreshButton.Name = "refreshButton";
+            this.refreshButton.Size = new System.Drawing.Size(23, 22);
+            this.refreshButton.Text = "toolStripButton3";
+            this.refreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
             // 
             // toolStripButton4
             // 
@@ -125,8 +128,11 @@
             this.webBrowser1.Location = new System.Drawing.Point(0, 25);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.ScriptErrorsSuppressed = true;
             this.webBrowser1.Size = new System.Drawing.Size(596, 245);
             this.webBrowser1.TabIndex = 3;
+            this.webBrowser1.Url = new System.Uri("https://google.com", System.UriKind.Absolute);
+            this.webBrowser1.Navigated += new System.Windows.Forms.WebBrowserNavigatedEventHandler(this.WebBrowser1_Navigated);
             // 
             // browserUserControl
             // 
@@ -144,9 +150,9 @@
         }
 
         #endregion
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripButton backLinksButton;
+        private System.Windows.Forms.ToolStripButton forwardLinksButton;
+        private System.Windows.Forms.ToolStripButton refreshButton;
         private System.Windows.Forms.ToolStripButton toolStripButton4;
         private System.Windows.Forms.ToolStripTextBox addressTextBox;
         private System.Windows.Forms.ToolStripButton goButton;
