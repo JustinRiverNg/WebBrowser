@@ -98,6 +98,7 @@
             this.addressTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.addressTextBox.Name = "addressTextBox";
             this.addressTextBox.Size = new System.Drawing.Size(100, 25);
+            this.addressTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AddressTextBox_KeyDown);
             // 
             // goButton
             // 
@@ -107,6 +108,7 @@
             this.goButton.Name = "goButton";
             this.goButton.Size = new System.Drawing.Size(23, 22);
             this.goButton.Text = "toolStripButton5";
+            this.goButton.Click += new System.EventHandler(this.GoButton_Click);
             // 
             // toolStripButton6
             // 
