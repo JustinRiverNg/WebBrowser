@@ -30,24 +30,11 @@ namespace WebBrowser.UI
                 "\nName: Justin Ng \nAuburn Univeristy Student ID: 904090369");
         }
 
-        /** Keyboard shortcuts for "Add Tab" and "Close Current Tab" functionality. The new tab added will include the browserUserControl.*/
         private void MainForm_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.Control && (e.KeyCode == Keys.T))
-            {
-                var page = new TabPage("New Tab");
-                var tabContent = new browserUserControl();
-                page.Controls.Add(tabContent);
-                tabContent.Dock = DockStyle.Fill; // Fill the new tab with the browserUserControl.
-                this.tabControl1.TabPages.Add(page);
-            }
-            if (e.Control && (e.KeyCode == Keys.W))
-            {
-                this.tabControl1.TabPages.RemoveAt(this.tabControl1.SelectedIndex);
-            }
         }
 
-        /** "Add Tab" functionality on-click. The new tab will include the browserUserControl.*/
+        /** "Add Tab" functionality on-click. The new tab will include the browserUserControl that fills the dock.*/
         private void NewTabToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var page = new TabPage("New Tab");

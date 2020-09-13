@@ -131,7 +131,7 @@
             this.webBrowser1.ScriptErrorsSuppressed = true;
             this.webBrowser1.Size = new System.Drawing.Size(596, 245);
             this.webBrowser1.TabIndex = 3;
-            this.webBrowser1.Url = new System.Uri("https://google.com", System.UriKind.Absolute);
+            this.webBrowser1.Url = new System.Uri("https://www.google.com/", System.UriKind.Absolute);
             this.webBrowser1.Navigated += new System.Windows.Forms.WebBrowserNavigatedEventHandler(this.WebBrowser1_Navigated);
             this.webBrowser1.Navigating += new System.Windows.Forms.WebBrowserNavigatingEventHandler(this.WebBrowser1_Navigating);
             // 

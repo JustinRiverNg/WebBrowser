@@ -42,8 +42,8 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.browserUserControl1 = new WebBrowser.UI.browserUserControl();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.browserUserControl1 = new WebBrowser.UI.browserUserControl();
             this.menuStrip1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -76,14 +76,16 @@
             // newTabToolStripMenuItem
             // 
             this.newTabToolStripMenuItem.Name = "newTabToolStripMenuItem";
-            this.newTabToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.newTabToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T)));
+            this.newTabToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.newTabToolStripMenuItem.Text = "New Tab";
             this.newTabToolStripMenuItem.Click += new System.EventHandler(this.NewTabToolStripMenuItem_Click);
             // 
             // closeCurrentTabToolStripMenuItem
             // 
             this.closeCurrentTabToolStripMenuItem.Name = "closeCurrentTabToolStripMenuItem";
-            this.closeCurrentTabToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.closeCurrentTabToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.W)));
+            this.closeCurrentTabToolStripMenuItem.Size = new System.Drawing.Size(212, 22);
             this.closeCurrentTabToolStripMenuItem.Text = "Close Current Tab";
             this.closeCurrentTabToolStripMenuItem.Click += new System.EventHandler(this.CloseCurrentTabToolStripMenuItem_Click);
             // 
@@ -153,14 +155,6 @@
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // browserUserControl1
-            // 
-            this.browserUserControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.browserUserControl1.Location = new System.Drawing.Point(3, 3);
-            this.browserUserControl1.Name = "browserUserControl1";
-            this.browserUserControl1.Size = new System.Drawing.Size(786, 392);
-            this.browserUserControl1.TabIndex = 0;
-            // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
@@ -169,6 +163,13 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(800, 424);
             this.tabControl1.TabIndex = 2;
+            // 
+            // browserUserControl1
+            // 
+            this.browserUserControl1.Location = new System.Drawing.Point(-4, 0);
+            this.browserUserControl1.Name = "browserUserControl1";
+            this.browserUserControl1.Size = new System.Drawing.Size(796, 398);
+            this.browserUserControl1.TabIndex = 0;
             // 
             // MainForm
             // 
@@ -207,7 +208,7 @@
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.TabPage tabPage1;
-        private browserUserControl browserUserControl1;
         private System.Windows.Forms.TabControl tabControl1;
+        private browserUserControl browserUserControl1;
     }
 }
