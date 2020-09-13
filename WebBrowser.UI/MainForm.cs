@@ -38,7 +38,7 @@ namespace WebBrowser.UI
                 var page = new TabPage("New Tab");
                 var tabContent = new browserUserControl();
                 page.Controls.Add(tabContent);
-                tabContent.Dock = DockStyle.Fill;
+                tabContent.Dock = DockStyle.Fill; // Fill the new tab with the browserUserControl.
                 this.tabControl1.TabPages.Add(page);
             }
             if (e.Control && (e.KeyCode == Keys.W))
@@ -53,7 +53,7 @@ namespace WebBrowser.UI
             var page = new TabPage("New Tab");
             var tabContent = new browserUserControl();
             page.Controls.Add(tabContent);
-            tabContent.Dock = DockStyle.Fill;
+            tabContent.Dock = DockStyle.Fill; // Fill the new tab with the browserUserControl.
             this.tabControl1.TabPages.Add(page);
         }
 
