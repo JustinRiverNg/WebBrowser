@@ -30,11 +30,16 @@ namespace WebBrowser.UI
                 "\nName: Justin Ng \nAuburn Univeristy Student ID: 904090369");
         }
 
+        /** Keyboard shortcuts for "Add Tab" and "Close Current Tab" functionality. The new tab added will include the browserUserControl.*/
         private void MainForm_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.Control && (e.KeyCode == Keys.T))
             {
-                this.tabControl1.TabPages.Add(new TabPage("New Tab"));
+                var page = new TabPage("New Tab");
+                var tabContent = new browserUserControl();
+                page.Controls.Add(tabContent);
+                tabContent.Dock = DockStyle.Fill;
+                this.tabControl1.TabPages.Add(page);
             }
             if (e.Control && (e.KeyCode == Keys.W))
             {
@@ -42,11 +47,17 @@ namespace WebBrowser.UI
             }
         }
 
+        /** "Add Tab" functionality on-click. The new tab will include the browserUserControl.*/
         private void NewTabToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.tabControl1.TabPages.Add(new TabPage("New Tab"));
+            var page = new TabPage("New Tab");
+            var tabContent = new browserUserControl();
+            page.Controls.Add(tabContent);
+            tabContent.Dock = DockStyle.Fill;
+            this.tabControl1.TabPages.Add(page);
         }
 
+        /** "Close Current Tab" functionality on-click. */
         private void CloseCurrentTabToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.tabControl1.TabPages.RemoveAt(this.tabControl1.SelectedIndex);
