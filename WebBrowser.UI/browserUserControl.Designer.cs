@@ -36,7 +36,7 @@
             this.toolStripButton4 = new System.Windows.Forms.ToolStripButton();
             this.addressTextBox = new System.Windows.Forms.ToolStripTextBox();
             this.goButton = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton6 = new System.Windows.Forms.ToolStripButton();
+            this.bookmarkButton = new System.Windows.Forms.ToolStripButton();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -50,7 +50,7 @@
             this.toolStripButton4,
             this.addressTextBox,
             this.goButton,
-            this.toolStripButton6});
+            this.bookmarkButton});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(596, 25);
@@ -64,7 +64,7 @@
             this.backLinksButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.backLinksButton.Name = "backLinksButton";
             this.backLinksButton.Size = new System.Drawing.Size(23, 22);
-            this.backLinksButton.Text = "toolStripButton1";
+            this.backLinksButton.Text = "Back Link";
             this.backLinksButton.Click += new System.EventHandler(this.BackLinksButton_Click);
             // 
             // forwardLinksButton
@@ -74,7 +74,7 @@
             this.forwardLinksButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.forwardLinksButton.Name = "forwardLinksButton";
             this.forwardLinksButton.Size = new System.Drawing.Size(23, 22);
-            this.forwardLinksButton.Text = "toolStripButton2";
+            this.forwardLinksButton.Text = "Forward Link";
             this.forwardLinksButton.Click += new System.EventHandler(this.ForwardLinksButton_Click);
             // 
             // refreshButton
@@ -84,7 +84,7 @@
             this.refreshButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.refreshButton.Name = "refreshButton";
             this.refreshButton.Size = new System.Drawing.Size(23, 22);
-            this.refreshButton.Text = "toolStripButton3";
+            this.refreshButton.Text = "Refresh";
             this.refreshButton.Click += new System.EventHandler(this.RefreshButton_Click);
             // 
             // toolStripButton4
@@ -94,7 +94,7 @@
             this.toolStripButton4.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton4.Name = "toolStripButton4";
             this.toolStripButton4.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton4.Text = "toolStripButton4";
+            this.toolStripButton4.Text = "Home";
             // 
             // addressTextBox
             // 
@@ -110,17 +110,18 @@
             this.goButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.goButton.Name = "goButton";
             this.goButton.Size = new System.Drawing.Size(23, 22);
-            this.goButton.Text = "toolStripButton5";
+            this.goButton.Text = "Go";
             this.goButton.Click += new System.EventHandler(this.GoButton_Click);
             // 
-            // toolStripButton6
+            // bookmarkButton
             // 
-            this.toolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
-            this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.Size = new System.Drawing.Size(23, 22);
-            this.toolStripButton6.Text = "toolStripButton6";
+            this.bookmarkButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bookmarkButton.Image = ((System.Drawing.Image)(resources.GetObject("bookmarkButton.Image")));
+            this.bookmarkButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.bookmarkButton.Name = "bookmarkButton";
+            this.bookmarkButton.Size = new System.Drawing.Size(23, 22);
+            this.bookmarkButton.Text = "Bookmark";
+            this.bookmarkButton.Click += new System.EventHandler(this.BookmarkButton_Click);
             // 
             // webBrowser1
             // 
@@ -157,7 +158,7 @@
         private System.Windows.Forms.ToolStripButton toolStripButton4;
         private System.Windows.Forms.ToolStripTextBox addressTextBox;
         private System.Windows.Forms.ToolStripButton goButton;
-        private System.Windows.Forms.ToolStripButton toolStripButton6;
+        private System.Windows.Forms.ToolStripButton bookmarkButton;
         public System.Windows.Forms.ToolStrip toolStrip1;
         public System.Windows.Forms.WebBrowser webBrowser1;
     }
