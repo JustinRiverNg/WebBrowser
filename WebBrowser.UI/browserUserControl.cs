@@ -84,7 +84,7 @@ namespace WebBrowser.UI
             addressTextBox.Text = webBrowser1.Url.ToString();
             var item = new HistoryItem();
             item.URL = webBrowser1.Url.ToString();
-            item.Title = webBrowser1.Url.ToString();
+            item.Title = webBrowser1.DocumentTitle;
             item.Date = DateTime.Now;
 
             HistoryManager.addItem(item);
@@ -93,7 +93,7 @@ namespace WebBrowser.UI
         private void BookmarkButton_Click(object sender, EventArgs e)
         {
             var newItem = new BookmarkItem();
-            newItem.Title = webBrowser1.Url.ToString();
+            newItem.Title = webBrowser1.DocumentTitle;
             newItem.URL = webBrowser1.Url.ToString();
 
             Boolean bookmarkExistsAlready = false;
