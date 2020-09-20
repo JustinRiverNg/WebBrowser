@@ -78,10 +78,16 @@ namespace WebBrowser.UI
 
         }
 
-        /** Change the url in the address field if the user clicks to navigate to a new page. This method occurs AFTER the web browser has navigated.*/
+        /** Change the url in the address field if the user navigates to a new page. This method occurs AFTER the web browser has navigated.*/
         private void WebBrowser1_Navigated(object sender, WebBrowserNavigatedEventArgs e)
         {
             addressTextBox.Text = webBrowser1.Url.ToString();
+            var item = new HistoryItem();
+            item.URL = webBrowser1.Url.ToString();
+            item.Title = webBrowser1.Url.ToString();
+            item.Date = DateTime.Now;
+
+            HistoryManager.addItem(item);
         }
 
         private void BookmarkButton_Click(object sender, EventArgs e)
