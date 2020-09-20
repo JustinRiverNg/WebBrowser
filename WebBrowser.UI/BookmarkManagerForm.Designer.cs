@@ -1,6 +1,6 @@
 ﻿namespace WebBrowser.UI
 {
-    partial class HistoryManagerForm
+    partial class BookmarkManagerForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,32 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.historyListBox = new System.Windows.Forms.ListBox();
+            this.bookmarkListBox = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
-            // historyListBox
+            // bookmarkListBox
             // 
-            this.historyListBox.FormattingEnabled = true;
-            this.historyListBox.Location = new System.Drawing.Point(148, 131);
-            this.historyListBox.Name = "historyListBox";
-            this.historyListBox.Size = new System.Drawing.Size(419, 277);
-            this.historyListBox.TabIndex = 0;
+            this.bookmarkListBox.FormattingEnabled = true;
+            this.bookmarkListBox.Location = new System.Drawing.Point(142, 129);
+            this.bookmarkListBox.Name = "bookmarkListBox";
+            this.bookmarkListBox.Size = new System.Drawing.Size(429, 264);
+            this.bookmarkListBox.TabIndex = 0;
             // 
-            // HistoryManagerForm
+            // BookmarkManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.historyListBox);
-            this.Name = "HistoryManagerForm";
-            this.Text = "HistoryManagerForm";
-            this.Load += new System.EventHandler(this.HistoryManagerForm_Load);
+            this.Controls.Add(this.bookmarkListBox);
+            this.Name = "BookmarkManagerForm";
+            this.Text = "BookmarkManagerForm";
+            this.Load += new System.EventHandler(this.BookmarkManagerForm_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ListBox historyListBox;
+        private System.Windows.Forms.ListBox bookmarkListBox;
     }
 }
