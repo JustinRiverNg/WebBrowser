@@ -92,11 +92,23 @@ namespace WebBrowser.UI
 
         private void BookmarkButton_Click(object sender, EventArgs e)
         {
-            var item = new BookmarkItem();
-            item.Title = webBrowser1.Url.ToString();
-            item.URL = webBrowser1.Url.ToString();
+            var newItem = new BookmarkItem();
+            newItem.Title = webBrowser1.Url.ToString();
+            newItem.URL = webBrowser1.Url.ToString();
 
-            BookmarkManager.addItem(item);
+            Boolean bookmarkExistsAlready = false;
+            var items = BookmarkManager.getItems();
+            foreach(var item in items)
+            {
+                if (item.URL == newItem.URL)
+                {
+                    bookmarkExistsAlready = true;
+                }
+            }
+            if (!bookmarkExistsAlready)
+            {
+                BookmarkManager.addItem(newItem);
+            }
         }
     }
 }
