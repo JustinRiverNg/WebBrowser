@@ -82,7 +82,5 @@ namespace WebBrowser.UI
         {
             addressTextBox.Text = webBrowser1.Url.ToString();
         }
-
-
     }
 }
