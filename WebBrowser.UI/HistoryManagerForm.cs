@@ -49,10 +49,11 @@ namespace WebBrowser.UI
 
         private void DeleteHistoryButton_Click(object sender, EventArgs e)
         {
+            var items = HistoryManager.getItems();
             string historyItemString = historyListBox.SelectedItem.ToString();
             string historyURL = historyItemString.Substring(historyItemString.IndexOf('(') + 1, historyItemString.IndexOf(')') -
                 (historyItemString.IndexOf('(') + 1));
-            var items = HistoryManager.deleteItem(historyURL);
+            items = HistoryManager.deleteItem(historyURL);
             historyListBox.Items.Clear();
 
             foreach (var item in items)

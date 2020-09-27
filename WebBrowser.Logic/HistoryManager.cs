@@ -63,6 +63,16 @@ namespace WebBrowser.Logic
 
             foreach (var row in rows)
             {
+
+                if (row.URL.Equals(URLin))
+                {
+                    adapter.Delete(row.Id, row.URL, row.Title, row.Date);
+                    break;
+
+                }
+            }
+            foreach (var row in rows)
+            {
                 var item = new HistoryItem();
                 item.URL = row.URL;
                 item.Title = row.Title;
@@ -70,28 +80,6 @@ namespace WebBrowser.Logic
                 item.Id = row.Id;
 
                 results.Add(item);
-            }
-
-
-            foreach (var row in rows)
-            {
-
-                if (row.URL.Equals(URLin))
-                {
-                    adapter.Delete(row.Id, row.URL, row.Title, row.Date);
-
-                    var item = new HistoryItem();
-                    item.URL = row.URL;
-                    item.Title = row.Title;
-                    item.Date = row.Date;
-                    item.Id = row.Id;
-
-                    results.Remove(item);
-
-                    break;
-
-
-                }
             }
             return results;
         }
