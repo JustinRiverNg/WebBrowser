@@ -34,5 +34,24 @@ namespace WebBrowser.Logic
 
             return results;
         }
+
+        public static List<HistoryItem> clearItems()
+        {
+            var adapter = new HistoryTableAdapter();
+            var results = new List<HistoryItem>();
+            var rows = adapter.GetData();
+
+            foreach (var row in rows)
+            {
+                var item = new HistoryItem();
+                item.URL = row.URL;
+                item.Title = row.Title;
+                item.Date = row.Date;
+                item.Id = row.Id;
+
+                results.Remove(item);
+            }
+            return results;
+        }
     }
 }
