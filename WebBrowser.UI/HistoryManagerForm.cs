@@ -46,5 +46,19 @@ namespace WebBrowser.UI
             var items = HistoryManager.clearItems();
             historyListBox.Items.Clear();
         }
+
+        private void DeleteHistoryButton_Click(object sender, EventArgs e)
+        {
+            string historyItemString = historyListBox.SelectedItem.ToString();
+            string historyURL = historyItemString.Substring(historyItemString.IndexOf('(') + 1, historyItemString.IndexOf(')') -
+                (historyItemString.IndexOf('(') + 1));
+            var items = HistoryManager.deleteItem(historyURL);
+            historyListBox.Items.Clear();
+
+            foreach (var item in items)
+            {
+                historyListBox.Items.Add(string.Format("[{0}] {1} ({2})", item.Date, item.Title, item.URL));
+            }
+        }
     }
 }

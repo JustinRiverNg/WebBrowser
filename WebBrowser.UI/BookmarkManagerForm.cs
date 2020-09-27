@@ -28,5 +28,18 @@ namespace WebBrowser.UI
                 bookmarkListBox.Items.Add(string.Format("{0} ({1})", item.Title, item.URL));
             }
         }
+
+        private void BookmarkSearchButton_Click(object sender, EventArgs e)
+        {
+            var items = BookmarkManager.getItems();
+            bookmarkListBox.Items.Clear();
+            foreach (var item in items)
+            {
+                if (item.Title.Contains(bookmarkSearchTextBox.Text) || (item.URL.Contains(bookmarkSearchTextBox.Text)))
+                {
+                    bookmarkListBox.Items.Add(string.Format("[{0}] {1})", item.Title, item.URL));
+                }
+            }
+        }
     }
 }

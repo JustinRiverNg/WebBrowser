@@ -55,7 +55,7 @@
             // 
             // historySearchButton
             // 
-            this.historySearchButton.Location = new System.Drawing.Point(713, 83);
+            this.historySearchButton.Location = new System.Drawing.Point(713, 80);
             this.historySearchButton.Name = "historySearchButton";
             this.historySearchButton.Size = new System.Drawing.Size(75, 23);
             this.historySearchButton.TabIndex = 2;
@@ -91,6 +91,7 @@
             this.deleteHistoryButton.TabIndex = 5;
             this.deleteHistoryButton.Text = "Delete";
             this.deleteHistoryButton.UseVisualStyleBackColor = true;
+            this.deleteHistoryButton.Click += new System.EventHandler(this.DeleteHistoryButton_Click);
             // 
             // label3
             // 

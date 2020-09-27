@@ -53,5 +53,46 @@ namespace WebBrowser.Logic
             }
             return results;
         }
+
+        public static List<HistoryItem> deleteItem(string URLin)
+        {
+            var adapter = new HistoryTableAdapter();
+            var results = new List<HistoryItem>();
+            var rows = adapter.GetData();
+
+            foreach (var row in rows)
+            {
+                var item = new HistoryItem();
+                item.URL = row.URL;
+                item.Title = row.Title;
+                item.Date = row.Date;
+                item.Id = row.Id;
+
+                results.Add(item);
+            }
+
+
+            foreach (var row in rows)
+            {
+
+                if (row.URL.Equals(URLin))
+                {
+                    adapter.Delete(row.Id, row.URL, row.Title, row.Date);
+
+                    var item = new HistoryItem();
+                    item.URL = row.URL;
+                    item.Title = row.Title;
+                    item.Date = row.Date;
+                    item.Id = row.Id;
+
+                    results.Remove(item);
+
+                    break;
+
+
+                }
+            }
+            return results;
+        }
     }
 }
