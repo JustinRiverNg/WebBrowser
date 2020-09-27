@@ -116,6 +116,7 @@ namespace WebBrowser.UI
             progressBar1.Maximum = (int)e.MaximumProgress;
             if (e.CurrentProgress == (int)e.MaximumProgress)
             {
+                statusLabel1.Text = "Done";
                 progressBar1.Value = (int)e.MaximumProgress;
             }
             else
@@ -127,6 +128,7 @@ namespace WebBrowser.UI
                 {
                     progressBar1.Value = 0;
                 }
+                statusLabel1.Text = "Loading";
             }
         }
     }
