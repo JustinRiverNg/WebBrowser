@@ -110,5 +110,24 @@ namespace WebBrowser.UI
                 BookmarkManager.addItem(newItem);
             }
         }
+
+        private void WebBrowser1_ProgressChanged(object sender, WebBrowserProgressChangedEventArgs e)
+        {
+            progressBar1.Maximum = (int)e.MaximumProgress;
+            if (e.CurrentProgress == (int)e.MaximumProgress)
+            {
+                progressBar1.Value = (int)e.MaximumProgress;
+            }
+            else
+            {
+                if (e.CurrentProgress >= 0 && e.CurrentProgress <= e.MaximumProgress) {
+                    progressBar1.Value = (int)e.CurrentProgress;
+                }
+                else
+                {
+                    progressBar1.Value = 0;
+                }
+            }
+        }
     }
 }
