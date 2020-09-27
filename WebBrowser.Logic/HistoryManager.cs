@@ -48,6 +48,7 @@ namespace WebBrowser.Logic
                 item.Title = row.Title;
                 item.Date = row.Date;
                 item.Id = row.Id;
+                adapter.Delete(row.Id, row.URL, row.Title, row.Date);
 
                 results.Remove(item);
             }

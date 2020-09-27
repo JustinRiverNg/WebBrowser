@@ -43,7 +43,7 @@ namespace WebBrowser.UI
 
         private void ClearHistoryButton_Click(object sender, EventArgs e)
         {
-            var items = HistoryManager.clearItems();
+            HistoryManager.clearItems();
             historyListBox.Items.Clear();
         }
 
