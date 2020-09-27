@@ -32,6 +32,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.bookmarkSearchTextBox = new System.Windows.Forms.TextBox();
             this.bookmarkSearchButton = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.deleteBookmarkButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // bookmarkListBox
@@ -69,11 +71,33 @@
             this.bookmarkSearchButton.UseVisualStyleBackColor = true;
             this.bookmarkSearchButton.Click += new System.EventHandler(this.BookmarkSearchButton_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label2.Location = new System.Drawing.Point(512, 191);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(130, 51);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Press \"delete\" to\r\ndelete the currently\r\nselected item:";
+            // 
+            // deleteBookmarkButton
+            // 
+            this.deleteBookmarkButton.Location = new System.Drawing.Point(697, 204);
+            this.deleteBookmarkButton.Name = "deleteBookmarkButton";
+            this.deleteBookmarkButton.Size = new System.Drawing.Size(75, 23);
+            this.deleteBookmarkButton.TabIndex = 8;
+            this.deleteBookmarkButton.Text = "Delete";
+            this.deleteBookmarkButton.UseVisualStyleBackColor = true;
+            this.deleteBookmarkButton.Click += new System.EventHandler(this.DeleteBookmarkButton_Click);
+            // 
             // BookmarkManagerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.deleteBookmarkButton);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.bookmarkSearchButton);
             this.Controls.Add(this.bookmarkSearchTextBox);
             this.Controls.Add(this.label1);
@@ -92,5 +116,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox bookmarkSearchTextBox;
         private System.Windows.Forms.Button bookmarkSearchButton;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button deleteBookmarkButton;
     }
 }

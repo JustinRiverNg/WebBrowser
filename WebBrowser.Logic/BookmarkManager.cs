@@ -33,5 +33,33 @@ namespace WebBrowser.Logic
 
             return results;
         }
+
+        public static List<BookmarkItem> deleteItem(string titleIn)
+        {
+            var adapter = new BookmarksTableAdapter();
+            var results = new List<BookmarkItem>();
+            var rows = adapter.GetData();
+
+            foreach (var row in rows)
+            {
+
+                if (row.Title.Equals(titleIn))
+                {
+                    adapter.Delete(row.Id, row.URL, row.Title);
+                    break;
+
+                }
+            }
+            foreach (var row in rows)
+            {
+                var item = new BookmarkItem();
+                item.URL = row.URL;
+                item.Title = row.Title;
+                item.Id = row.Id;
+
+                results.Add(item);
+            }
+            return results;
+        }
     }
 }
