@@ -40,5 +40,10 @@ namespace WebBrowser.UI
                 }
             }
         }
+
+        private void ClearHistoryButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
