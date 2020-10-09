@@ -68,5 +68,10 @@ namespace WebBrowser.UI
             HistoryManager.clearItems();
 
         }
+
+        private void SuperWebBrowser3000_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
